@@ -1,0 +1,26 @@
+MDScreen:
+    UI:
+        FirstScreen:
+            name: "first"
+        SecondScreen:
+            name: "second"
+
+<UI>:
+    id: ui
+    FirstScreen:
+        name: "first"
+        MDLabel:
+            text: "Screen 1"
+            color: "red"
+            halign: "center"
+        MDRectangleFlatButton:
+            text: "Go to Screen 2"
+            pos_hint: {"center_x": .5, "center_y": .2}
+            on_press: root.change_screen("second")
+    
+    SecondScreen:
+        name: "second"
+        MDLabel:
+            text: "Screen 2"
+            color: "blue"
+            halign: "center"
